@@ -1,0 +1,91 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 6 version
+*/
+
+/* პოზიციებით ფოტოზე წარწერის გაკეთება */
+.box{
+    position: relative;
+    color: rgb(255, 0, 21);
+    width: 1040px;
+    height: 472;
+    /* ეს ბოლო ფოტოს სიგანე და სიმაღლე დავუწერე რაზეც უნდა განთავსდეს */
+}
+.cover{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.wrapper{
+    position: absolute;
+    left: 80px;
+    top: 50px;
+}
+/* p:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+.button{
+    border-radius: 40px;
+    background-color: rgb(193, 74, 209);
+    width:150px;
+    height: 40px;
+}
+/* პოზიციებით ფოტოზე წარწერის გაკეთება(დასრულება) */
+
+/* ბექგრაუნდად ფოტოს შემოტანა */
+.bg-image{
+    background-image: url(../image/bg-image.jpg);
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* ბექგრაუნდად ფოტოს შემოტანაზე ანიმაცია */
+.satauri{
+    color: white;
+    font-size: 40px;
+    /* transition-property: all;
+    transition-delay: 0.5s;
+    transition-duration: 1s;
+    transition-timing-function: linear; */
+    /* ეს დაკომენტარებული მოკლედ შეგვიძლია ასე ჩავწეროთ
+    0.5s დაწყებისა და დასრულების დროებია */
+    -webkit-transition: all 0.5s linear 0.5s;
+    -o-transition: all 0.5s linear 0.5s;
+    transition: all 0.5s linear 0.5s;
+}
+.satauri:hover{
+    color: yellow;
+    background-color: violet;
+}
+/* მაუსის მიტანის გარეშე ანიმაცია */
+div{
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    position: absolute;
+    -webkit-animation-name: cube;
+            animation-name: cube;
+    -webkit-animation-duration: 5s infinite;
+            animation-duration: 5s infinite;
+}
+@-webkit-keyframes cube {
+    from{top: 0;  background-color: yellow; border-radius: 20px};
+    to{top:200px; background-color: green; border-radius: 50px;};
+    /* 0%{top:0; background-color: yellow; border-radius: 20px};
+    50%{top:100px; background-color: green; border-radius: 50px};
+    100%{top:200px; background-color: pink; border-radius: 100px}; */
+}
+@keyframes cube {
+    /* from{top: 0};
+    to{top:200px}; */
+    0%{top:0; background-color: yellow; border-radius: 20px};
+    50%{top:100px; background-color: green; border-radius: 50px};
+    100%{top:200px; background-color: pink; border-radius: 100px};
+}
